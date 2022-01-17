@@ -58,7 +58,8 @@ const compareString = textToSearch =>{
     for(let indx=0; indx < person.length; indx++){
         let id = person[indx].id;
         let fullName = person[indx].firstName+" "+person[indx].lastName;
-        let value = stringSimilarity.compareTwoStrings(textToSearch.toLowerCase(),fullName.toLowerCase());
+        let value = stringSimilarity.compareTwoStrings(fullName.toLowerCase(),textToSearch.toLowerCase());
+        //let value = Similarity(fullName.toLowerCase(),textToSearch.toLowerCase());
 
         if(value >= 0.4){
         KeepSimilarityValue.push({
